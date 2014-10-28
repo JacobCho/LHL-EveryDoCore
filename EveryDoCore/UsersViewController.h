@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+#import "Todo.h"
+#import "User.h"
 
-@interface UsersViewController : UITableViewController
+@interface UsersViewController : UITableViewController <NSFetchedResultsControllerDelegate>
+
+@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+
 
 @end

@@ -22,6 +22,7 @@
 		52BE13F11A0041930090A2B0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13F01A0041930090A2B0 /* User.m */; };
 		52BE13F41A00437A0090A2B0 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13F31A00437A0090A2B0 /* Todo.m */; };
 		52BE13F71A0054740090A2B0 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13F61A0054740090A2B0 /* UsersViewController.m */; };
+		52BE13FA1A005A1E0090A2B0 /* UsersTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13F91A005A1E0090A2B0 /* UsersTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		52BE13F31A00437A0090A2B0 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		52BE13F51A0054740090A2B0 /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
 		52BE13F61A0054740090A2B0 /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
+		52BE13F81A005A1E0090A2B0 /* UsersTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersTableViewCell.h; sourceTree = "<group>"; };
+		52BE13F91A005A1E0090A2B0 /* UsersTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				52BE13C31A0010940090A2B0 /* Main.storyboard */,
+				52BE13F81A005A1E0090A2B0 /* UsersTableViewCell.h */,
+				52BE13F91A005A1E0090A2B0 /* UsersTableViewCell.m */,
 				52BE13E31A0016CC0090A2B0 /* TodoTableViewCell.h */,
 				52BE13E41A0016CC0090A2B0 /* TodoTableViewCell.m */,
 			);
@@ -289,6 +294,7 @@
 				52BE13F41A00437A0090A2B0 /* Todo.m in Sources */,
 				52BE13F71A0054740090A2B0 /* UsersViewController.m in Sources */,
 				52BE13BF1A0010940090A2B0 /* MasterViewController.m in Sources */,
+				52BE13FA1A005A1E0090A2B0 /* UsersTableViewCell.m in Sources */,
 				52BE13BC1A0010940090A2B0 /* EveryDoCore.xcdatamodeld in Sources */,
 				52BE13B91A0010940090A2B0 /* AppDelegate.m in Sources */,
 				52BE13B61A0010940090A2B0 /* main.m in Sources */,

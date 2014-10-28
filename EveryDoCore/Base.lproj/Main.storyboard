@@ -24,16 +24,34 @@
         <scene sceneID="oLS-zL-Ts7">
             <objects>
                 <tableViewController id="6jW-aK-TCF" customClass="UsersViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wo2-xd-jHv">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="73" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wo2-xd-jHv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="5lg-Jq-xo4">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="UserCell" rowHeight="73" id="1x8-Zs-lhB" customClass="UsersTableViewCell">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5lg-Jq-xo4" id="Wsc-mI-hJC">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1x8-Zs-lhB" id="cRM-pP-Q5B">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7C9-fe-25T">
+                                            <rect key="frame" x="15" y="25" width="41" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9B5-l3-Sni">
+                                            <rect key="frame" x="64" y="25" width="274" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="userLabel" destination="9B5-l3-Sni" id="Xpu-dR-72x"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -45,7 +63,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RnG-Nd-7Cw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="528"/>
+            <point key="canvasLocation" x="914" y="526"/>
         </scene>
         <!--Users-->
         <scene sceneID="5lv-NW-cTW">
@@ -120,7 +138,7 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Master" id="tQt-TN-PWz">
+                    <navigationItem key="navigationItem" title="Todo List" id="tQt-TN-PWz">
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="E81-7W-7Lp">
                             <connections>
                                 <segue destination="Wv8-1e-LGI" kind="push" identifier="addTodoSegue" id="g6j-wb-YqH"/>
@@ -336,13 +354,13 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="rS3-R9-Ivy" kind="relationship" relationship="viewControllers" id="o7d-8R-dDz"/>
-                        <segue destination="ios-en-qpA" kind="relationship" relationship="viewControllers" id="eXB-VT-lDo"/>
+                        <segue destination="rS3-R9-Ivy" kind="relationship" relationship="viewControllers" id="c7h-fI-d8n"/>
+                        <segue destination="ios-en-qpA" kind="relationship" relationship="viewControllers" id="je7-p0-AeF"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYZ-nN-60M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-250" y="60"/>
+            <point key="canvasLocation" x="-258" y="186"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
