@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Todo.h"
-#import <CoreData/CoreData.h>
+#import "User.h"
 
 @class DetailViewController;
 
@@ -22,8 +22,7 @@
 
 @property (weak , nonatomic) id<DetailViewControllerDelegate> delegate;
 @property (strong, nonatomic) Todo *todo;
-@property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
-@property (strong, nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (strong, nonatomic) User *user;
 @property (strong, nonatomic) NSIndexPath *indexPath;
 
 @property (weak, nonatomic) IBOutlet UITextField *titleTextField;
@@ -31,6 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *priorityNumberLabel;
 @property (weak, nonatomic) IBOutlet UISlider *prioritySlider;
 @property (weak, nonatomic) IBOutlet UISegmentedControl *completedControl;
+@property (weak, nonatomic) IBOutlet UITextField *userTextField;
 
 - (IBAction)sliderValueChanged:(UISlider *)sender;
 - (IBAction)completedControlChanged:(UISegmentedControl *)sender;

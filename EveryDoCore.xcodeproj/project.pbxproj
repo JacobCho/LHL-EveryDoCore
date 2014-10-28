@@ -16,10 +16,12 @@
 		52BE13C71A0010940090A2B0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52BE13C61A0010940090A2B0 /* Images.xcassets */; };
 		52BE13CA1A0010940090A2B0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 52BE13C81A0010940090A2B0 /* LaunchScreen.xib */; };
 		52BE13D61A0010940090A2B0 /* EveryDoCoreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13D51A0010940090A2B0 /* EveryDoCoreTests.m */; };
-		52BE13E11A0012350090A2B0 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13E01A0012350090A2B0 /* Todo.m */; };
 		52BE13E51A0016CC0090A2B0 /* TodoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13E41A0016CC0090A2B0 /* TodoTableViewCell.m */; };
 		52BE13EB1A0026A40090A2B0 /* AddTodoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13EA1A0026A40090A2B0 /* AddTodoViewController.m */; };
 		52BE13EE1A002C490090A2B0 /* CoreDataHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13ED1A002C490090A2B0 /* CoreDataHelper.m */; };
+		52BE13F11A0041930090A2B0 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13F01A0041930090A2B0 /* User.m */; };
+		52BE13F41A00437A0090A2B0 /* Todo.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13F31A00437A0090A2B0 /* Todo.m */; };
+		52BE13F71A0054740090A2B0 /* UsersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 52BE13F61A0054740090A2B0 /* UsersViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,14 +51,18 @@
 		52BE13CF1A0010940090A2B0 /* EveryDoCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EveryDoCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52BE13D41A0010940090A2B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52BE13D51A0010940090A2B0 /* EveryDoCoreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EveryDoCoreTests.m; sourceTree = "<group>"; };
-		52BE13DF1A0012350090A2B0 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
-		52BE13E01A0012350090A2B0 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
 		52BE13E31A0016CC0090A2B0 /* TodoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TodoTableViewCell.h; sourceTree = "<group>"; };
 		52BE13E41A0016CC0090A2B0 /* TodoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TodoTableViewCell.m; sourceTree = "<group>"; };
 		52BE13E91A0026A40090A2B0 /* AddTodoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddTodoViewController.h; sourceTree = "<group>"; };
 		52BE13EA1A0026A40090A2B0 /* AddTodoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddTodoViewController.m; sourceTree = "<group>"; };
 		52BE13EC1A002C490090A2B0 /* CoreDataHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataHelper.h; sourceTree = "<group>"; };
 		52BE13ED1A002C490090A2B0 /* CoreDataHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataHelper.m; sourceTree = "<group>"; };
+		52BE13EF1A0041930090A2B0 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		52BE13F01A0041930090A2B0 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		52BE13F21A00437A0090A2B0 /* Todo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Todo.h; sourceTree = "<group>"; };
+		52BE13F31A00437A0090A2B0 /* Todo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Todo.m; sourceTree = "<group>"; };
+		52BE13F51A0054740090A2B0 /* UsersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UsersViewController.h; sourceTree = "<group>"; };
+		52BE13F61A0054740090A2B0 /* UsersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UsersViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,10 +146,12 @@
 			isa = PBXGroup;
 			children = (
 				52BE13BA1A0010940090A2B0 /* EveryDoCore.xcdatamodeld */,
+				52BE13F21A00437A0090A2B0 /* Todo.h */,
+				52BE13F31A00437A0090A2B0 /* Todo.m */,
+				52BE13EF1A0041930090A2B0 /* User.h */,
+				52BE13F01A0041930090A2B0 /* User.m */,
 				52BE13EC1A002C490090A2B0 /* CoreDataHelper.h */,
 				52BE13ED1A002C490090A2B0 /* CoreDataHelper.m */,
-				52BE13DF1A0012350090A2B0 /* Todo.h */,
-				52BE13E01A0012350090A2B0 /* Todo.m */,
 			);
 			name = "Core Data";
 			sourceTree = "<group>";
@@ -161,6 +169,8 @@
 		52BE13E81A00170F0090A2B0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				52BE13F51A0054740090A2B0 /* UsersViewController.h */,
+				52BE13F61A0054740090A2B0 /* UsersViewController.m */,
 				52BE13BD1A0010940090A2B0 /* MasterViewController.h */,
 				52BE13BE1A0010940090A2B0 /* MasterViewController.m */,
 				52BE13C01A0010940090A2B0 /* DetailViewController.h */,
@@ -271,11 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52BE13F11A0041930090A2B0 /* User.m in Sources */,
 				52BE13EB1A0026A40090A2B0 /* AddTodoViewController.m in Sources */,
 				52BE13E51A0016CC0090A2B0 /* TodoTableViewCell.m in Sources */,
 				52BE13C21A0010940090A2B0 /* DetailViewController.m in Sources */,
 				52BE13EE1A002C490090A2B0 /* CoreDataHelper.m in Sources */,
-				52BE13E11A0012350090A2B0 /* Todo.m in Sources */,
+				52BE13F41A00437A0090A2B0 /* Todo.m in Sources */,
+				52BE13F71A0054740090A2B0 /* UsersViewController.m in Sources */,
 				52BE13BF1A0010940090A2B0 /* MasterViewController.m in Sources */,
 				52BE13BC1A0010940090A2B0 /* EveryDoCore.xcdatamodeld in Sources */,
 				52BE13B91A0010940090A2B0 /* AppDelegate.m in Sources */,

@@ -16,6 +16,9 @@
 @property (weak, nonatomic) IBOutlet UITextField *descriptionTextField;
 @property (weak, nonatomic) IBOutlet UILabel *priorityNumberLabel;
 @property (weak, nonatomic) IBOutlet UISlider *prioritySlider;
+@property (weak, nonatomic) IBOutlet UITextField *userTextField;
+
+
 - (IBAction)sliderValueChanged:(UISlider *)sender;
 - (IBAction)doneBarButtonItemPressed:(UIBarButtonItem *)sender;
 - (IBAction)cancelBarButtonItemPressed:(UIBarButtonItem *)sender;

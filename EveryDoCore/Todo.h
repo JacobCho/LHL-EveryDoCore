@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
+@class User;
 
 @interface Todo : NSManagedObject
 
@@ -16,5 +17,6 @@
 @property (nonatomic, retain) NSString * taskDescription;
 @property (nonatomic, retain) NSNumber * priorityNumber;
 @property (nonatomic, retain) NSNumber * isCompleted;
+@property (nonatomic, retain) User *user;
 
 @end

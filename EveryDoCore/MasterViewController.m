@@ -33,6 +33,7 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Todo *todo = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+        
         DetailViewController *dvc = segue.destinationViewController;
         dvc.todo = todo;
         dvc.delegate = self;
@@ -82,6 +83,7 @@
     cell.titleLabel.text = [object valueForKey:@"title"];
     cell.descriptionLabel.text = [object valueForKey:@"taskDescription"];
     cell.priorityLabel.text = [NSString stringWithFormat:@"Priority Number: %@",[object valueForKey:@"priorityNumber"]];
+    cell.userLabel.text = [NSString stringWithFormat:@"User: %@",[[object valueForKey:@"user"] valueForKey:@"name"]];
 }
 
 #pragma mark - Fetched results controller
@@ -180,11 +182,21 @@
 
 -(void)dataObjectChanged:(DetailViewController *)dvc forTodo:(Todo *)todo {
     
+    NSManagedObjectContext *context = [self.fetchedResultsController managedObjectContext];
+    
     [self controller:self.fetchedResultsController didChangeObject:todo atIndexPath:dvc.indexPath forChangeType:NSFetchedResultsChangeUpdate newIndexPath:dvc.indexPath];
+    
+    NSError *error = nil;
+    if (![context save:&error]) {
+        // Replace this implementation with code to handle the error appropriately.
+        // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+        NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
+        abort();
+    }
 }
 
 /*
-// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed. 
+// Implementing the above methods to update the table view in response to individual changes may have performance implications if a large number of changes are made simultaneously. If this proves to be an issue, you can instead just implement controllerDidChangeContent: which notifies the delegate that all section and object changes have been processed.
  
  - (void)controllerDidChangeContent:(NSFetchedResultsController *)controller
 {

@@ -7,6 +7,7 @@
 //
 
 #import "Todo.h"
+#import "User.h"
 
 
 @implementation Todo
@@ -15,5 +16,6 @@
 @dynamic taskDescription;
 @dynamic priorityNumber;
 @dynamic isCompleted;
+@dynamic user;
 
 @end

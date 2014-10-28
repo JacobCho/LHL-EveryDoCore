@@ -8,7 +8,7 @@
 
 #import "DetailViewController.h"
 #import "MasterViewController.h"
-#import "CoreDataHelper.h"
+
 
 
 @interface DetailViewController ()
@@ -22,7 +22,7 @@
 - (void)setDetailItem:(Todo *)todo {
     if (self.todo != todo) {
         self.todo = todo;
-            
+        
         // Update the view.
         [self configureView];
     }
@@ -39,6 +39,8 @@
         if (self.todo.isCompleted) {
             self.completedControl.selectedSegmentIndex = 1;
         }
+        self.user = self.todo.user;
+        self.userTextField.text = self.user.name;
 
     }
 }
@@ -76,6 +78,9 @@
     self.todo.title = self.titleTextField.text;
     self.todo.taskDescription = self.descriptionTextField.text;
     self.todo.priorityNumber = [[NSNumber alloc] initWithInt: (int)[self.priorityNumberLabel.text integerValue]];
+    self.user.name = self.userTextField.text;
+    self.todo.user = self.user;
+    
     [self.delegate dataObjectChanged:self forTodo:self.todo];
     
     [self.navigationController popViewControllerAnimated:TRUE];
