@@ -86,4 +86,9 @@
     [self.navigationController popViewControllerAnimated:TRUE];
     
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    
+    return YES;
+}
 @end

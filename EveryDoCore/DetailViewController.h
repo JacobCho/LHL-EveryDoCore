@@ -18,7 +18,7 @@
 
 @end
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak , nonatomic) id<DetailViewControllerDelegate> delegate;
 @property (strong, nonatomic) Todo *todo;

@@ -19,16 +19,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-//    UITabBarController *tabBarController = (UITabBarController *)self.window.rootViewController;
-//    MasterViewController *masterController = (MasterViewController *)tabBarController.selectedViewController;
-//    masterController.managedObjectContext = self.managedObjectContext;
-//    
-////    MasterViewController *masterController = [[MasterViewController alloc] init];
-////    masterController.managedObjectContext = self.managedObjectContext;
-////    
-//    UsersViewController *userController = [[UsersViewController alloc] init];
-//    userController.managedObjectContext = self.managedObjectContext;
+    
     return YES;
 }
 

@@ -10,7 +10,10 @@
 #import "UsersTableViewCell.h"
 #import "CoreDataHelper.h"
 
-@interface UsersViewController ()
+@interface UsersViewController () {
+    
+    NSArray *uniqueNames;
+}
 
 @end
 
@@ -24,6 +27,17 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    NSArray *names = @[];
+    names = [[self.fetchedResultsController fetchedObjects] valueForKey:@"name"];
+    
+    uniqueNames = [names valueForKeyPath:[NSString stringWithFormat:@"@distinctUnionOfObjects.%@", @"self"]];
+    
+    [self.tableView reloadData];
 }
 
 
@@ -34,8 +48,8 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
-    return [sectionInfo numberOfObjects];
+//    id <NSFetchedResultsSectionInfo> sectionInfo = [self.fetchedResultsController sections][section];
+    return [uniqueNames count];
 }
 
 
@@ -49,8 +63,8 @@
 
 
 - (void)configureCell:(UsersTableViewCell *)cell atIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObject *object = [self.fetchedResultsController objectAtIndexPath:indexPath];
-    cell.userLabel.text = [object valueForKey:@"name"];
+
+    cell.userLabel.text = uniqueNames[indexPath.row];
 }
 
 /*
